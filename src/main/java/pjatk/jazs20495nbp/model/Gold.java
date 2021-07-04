@@ -6,25 +6,25 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-@Entity(name= "gold")
+@Entity(name = "gold")
 public class Gold {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @ApiModelProperty(notes = "Id of gold currency.")
+    @ApiModelProperty(notes = "Id of gold currency.", required = true, value = "id", example = "1")
     private Long id;
 
-    @ApiModelProperty(notes = "Name of currency.")
+    @ApiModelProperty(notes = "Name of currency.", required = true, value = "gold", example = "Gold")
     private String currency_name;
-    @ApiModelProperty(notes = "Start searching date.")
+    @ApiModelProperty(notes = "Start searching date.", required = true, value = "date", example = "2021-04-07")
     private LocalDate start_date;
-    @ApiModelProperty(notes = "End searching date.")
+    @ApiModelProperty(notes = "End searching date.", required = true, value = "date", example = "2021-04-07")
     private LocalDate end_date;
-    @ApiModelProperty(notes = "The average exchange price of currency between given dates.")
+    @ApiModelProperty(notes = "The average exchange price of currency between given dates.", required = true, value = "double", example = "2.17")
     private double avg_currency;
-    @ApiModelProperty(notes = "Request date.")
+    @ApiModelProperty(notes = "Request date.", required = true, value = "date", example = "2021-04-07")
     private LocalDate start_req_date;
-    @ApiModelProperty(notes = "Request time.")
+    @ApiModelProperty(notes = "Request time.",required = true, value = "time", example = "00:00:00")
     private LocalTime start_req_time;
 
     public Gold() {

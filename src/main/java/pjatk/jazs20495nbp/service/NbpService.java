@@ -3,12 +3,10 @@ package pjatk.jazs20495nbp.service;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import pjatk.jazs20495nbp.model.Gold;
-import pjatk.jazs20495nbp.model.Rate;
 import pjatk.jazs20495nbp.repository.NBPRepository;
 
 import java.time.LocalDate;
 import java.time.LocalTime;
-import java.util.List;
 
 @Service
 public class NbpService {
@@ -31,5 +29,4 @@ public class NbpService {
         gold.setStart_req_time(LocalTime.now());
         return gold;
     }
-
 }
