@@ -8,18 +8,13 @@ import pjatk.jazs20495nbp.service.NbpService;
 @RequestMapping("/nbp")
 public class NBPRestController {
 
-   private final NbpService nbpService;
+    private final NbpService nbpService;
 
     public NBPRestController(NbpService nbpService) {
         this.nbpService = nbpService;
     }
 
-//    @GetMapping(value = "/currency/calculate", produces = MediaType.APPLICATION_JSON_VALUE)
-//    public ResponseEntity<> calculateCurrency(@PathVariable String currency, @RequestParam(defaultValue = "1") int numberOfDays){
-//
-//        return ResponseEntity.ok(nbpService.calculate(currency, numberOfDays));
-//
+//    @GetMapping(value = "/gold", produces = MediaType.APPLICATION_JSON_VALUE)
+//    public ResponseEntity<> calculateCurrency(@PathVariable String currency, @RequestParam(defaultValue = "1")
 //    }
-
-
 }

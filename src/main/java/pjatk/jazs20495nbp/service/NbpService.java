@@ -32,14 +32,4 @@ public class NbpService {
         return gold;
     }
 
-    public double calculate(List<Rate> reteList) {
-        double sum = 0;
-        long count = 0;
-        for (Rate rate : reteList) {
-            double mid = rate.getMiddle_value();
-            sum += mid;
-            count++;
-        }
-        return count > 0 ? sum / count : 0.0d;
-    }
 }
